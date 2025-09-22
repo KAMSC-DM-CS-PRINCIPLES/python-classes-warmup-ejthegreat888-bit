@@ -2,18 +2,16 @@
 
 class BankAccount:
 
-    balance = 0
-
-    def __init__(self, balance):
+    def __init__(self, balance = 0):
         self.balance = balance
 
-    def deposite(self, n):
+    def deposit(self, n):
         if self.balance < 0:
             return self.balance
         self.balance += n
         return self.balance
 
-    def withdrawl(self, n):
+    def withdraw(self, n):
         if n > self.balance:
             return "Insufficient Funds"
         elif n < 0:
@@ -25,4 +23,5 @@ class BankAccount:
 
 if __name__ == "__main__":
     # create BankAccount below this
-    pass
+    bank123 = BankAccount(50)
+    print(bank123.get_balance())
