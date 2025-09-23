@@ -1,14 +1,19 @@
 # TODO create class Student
-import math
 
-class PythagoreanTheorem:
+class Student:
 
-    def __init__(self, a = 0, b = 0):
-        self.a = a
-        self.b = b
+    def __init__(self, name = "", grade = ""):
+        self.name = name
+        self.grade = grade
 
-    def hypotenuse(self):
-        return math.sqrt(self.a**2 + self.b**2)
+    def get_name(self):
+        return self.name
+
+    def get_grade(self):
+        return self.grade
+
+    def set_grade(self, n):
+        self.grade = n
 
 if __name__ == "__main__":
     # create Student below this
