@@ -7,7 +7,7 @@ class BankAccount:
 
     def deposit(self, n):
         if self.balance < 0:
-            return self.balance
+            return "Must be positive"
         self.balance += n
         return self.balance
 
@@ -16,7 +16,9 @@ class BankAccount:
             return "Insufficient Funds"
         elif n < 0:
             return self.balance
-        return self.balance - n
+        self.balance = self.balance - n
+        return self.balance
+
 
     def get_balance(self):
         return self.balance
